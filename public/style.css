@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content-container {
+  height: calc(100vh - 100px);
+}
+
+ul {
+  list-style: none;
+}
+
+.messages li .message-content {
+  width: 60%;
+}
+
+.messages .you {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input {
+  background: #EEEEEE !important;
+}
