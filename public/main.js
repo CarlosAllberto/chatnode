@@ -104,13 +104,3 @@ socket.on('disconnect', () => {
   renderUserList()
   textInput.disabled = true
 })
-
-socket.on('reconnect_error', () => addMessage('status', null, 'Tentando reconectar...'))
-
-socket.on('reconnect', () => {
-  textInput.disabled = false
-  addMessage('status', null, 'Você foi reconectado.')
-  if (username != '') {
-    socket.emit('join', username)
-  }
-})
