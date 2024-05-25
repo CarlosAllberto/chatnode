@@ -21,11 +21,16 @@ io.on('connection', socket => {
     })
   })
 
-  socket.on('disconnect', () => {
+  socket.on('left', () => {
     connectedUsers = connectedUsers.filter(e => e != socket.username)
     socket.broadcast.emit('list-update', {
       left: socket.username,
       list: connectedUsers
     })
   })
+
+  socket.on('message', message => socket.broadcast.emit('message-recv', {
+    username: socket.username,
+    message: message
+  }))
 })

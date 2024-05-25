@@ -1,25 +1,16 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.content-container {
-  height: calc(100vh - 100px);
-}
+* { margin: 0; padding: 0; }
 
 ul {
   list-style: none;
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
 }
 
-.messages li .message-content {
-  width: 60%;
-}
+.messages li .message-content { width: 60%; }
 
-.messages .you {
+.messages .me {
   display: flex;
   justify-content: flex-end;
 }
 
-input {
-  background: #EEEEEE !important;
-}
+input { background: #EEEEEE !important; }
